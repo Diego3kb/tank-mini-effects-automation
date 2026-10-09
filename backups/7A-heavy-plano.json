@@ -1,0 +1,29 @@
+{
+  "expected_sha256": "2217d15676bfb48ee94474d19651584b643bc17e7827152d91dc6a1111e2d200",
+  "edits": {
+    "7A": {
+      "preset_volume_raw": 78,
+      "fx.enabled": 1,
+      "fx.type": "Boost",
+      "fx.gate": 60,
+      "fx.boost_gain": 24,
+      "fx.param3": 0,
+      "fx.param4": 0,
+      "amp.enabled": 1,
+      "amp.model_id": 19,
+      "amp.gain": 82,
+      "amp.level": 69,
+      "amp.bass": 50,
+      "amp.mid": 60,
+      "amp.treble": 60,
+      "cab.enabled": 1,
+      "cab.slot": 11,
+      "cab.level": 100,
+      "cab.low_cut_raw": 25,
+      "cab.high_cut_raw": 40,
+      "mod.enabled": 0,
+      "delay.enabled": 0,
+      "reverb.enabled": 0
+    }
+  }
+}

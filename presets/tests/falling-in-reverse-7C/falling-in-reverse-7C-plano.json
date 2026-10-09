@@ -1,0 +1,24 @@
+{
+  "expected_sha256": "2217d15676bfb48ee94474d19651584b643bc17e7827152d91dc6a1111e2d200",
+  "edits": {
+    "7C": {
+      "fx.enabled": 1,
+      "fx.type": "Boost",
+      "fx.gate": 55,
+      "fx.boost_gain": 24,
+      "amp.enabled": 1,
+      "amp.model_id": 8,
+      "amp.gain": 78,
+      "amp.bass": 46,
+      "amp.mid": 61,
+      "amp.treble": 61,
+      "cab.enabled": 1,
+      "cab.slot": 10,
+      "cab.low_cut_raw": 24,
+      "cab.high_cut_raw": 30,
+      "mod.enabled": 0,
+      "delay.enabled": 0,
+      "reverb.enabled": 0
+    }
+  }
+}

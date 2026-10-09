@@ -1,0 +1,8 @@
+{
+  "expected_sha256": "b22db0ca89124537a54038572d725e6621a9d194f4dd9419aec1c090c968837c",
+  "edits": {
+    "7B": {
+      "cab.slot": 11
+    }
+  }
+}

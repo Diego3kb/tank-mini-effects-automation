@@ -1,0 +1,14 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local editor and OS files
+.vscode/
+.idea/
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini
+
+# Historical source archive is kept locally but is not part of this public project.
+archive/legacy-reference/source-reference/

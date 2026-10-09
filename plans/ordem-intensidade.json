@@ -1,0 +1,8 @@
+{
+  "criterio": "do mais suave e limpo ao mais pesado; baixos agrupados no final",
+  "ordem_nova": [
+    "1A", "1B", "2A", "2B", "5A", "5B", "4C", "2C", "5C", "1C",
+    "4B", "3B", "3C", "4A", "3A", "7A", "6A", "6B", "6C", "7B", "7C"
+  ],
+  "origem": "backups/automation-20261009-145209/export-all.atkm"
+}

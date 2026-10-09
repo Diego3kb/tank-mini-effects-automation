@@ -1,0 +1,55 @@
+TANK MINI - CABs CUSTOMIZADOS
+==============================
+
+TANK MINI - CABs CUSTOMIZADOS (CORRIGIDO)
+==========================================
+
+[16] ORANGE JR
+        Orange Jim Root PPC212 (center_L19_cab50_e906)
+        Uso: Slipknot, Papa Roach, FR (pesado)
+
+[17] FENDER GLSY
+        Fender Glsy.wav (clean glassy)
+        Uso: RHCP funk, LP versos, FR cleans
+
+[18] BOGNER 4x12
+        BognerUbercab(4x12)1.wav
+        Uso: FR screams, A7X solos, LP drops
+
+[19] DIEZEL V30
+        DiezelV30(4x12).wav
+        Uso: Slipknot moderno, FR drops, tight lows
+
+[20] VOX AC30
+        VOX AC30 MIX.wav
+        Uso: A7X solos, RHCP melodias, LP texturas
+
+==============================
+CABs ORIGINAIS (slots 1-15)
+==============================
+
+01 EAGLProV30s       -> Guitarra (Eagle Pro V30)
+02 Sperimental        -> Guitarra (Experimental)
+03 JUICE4x12V30       -> Guitarra (4x12 V30 - high gain)
+04 Mess Bog           -> Guitarra (Mesa Boogie)
+05 FdChamp            -> Guitarra (Fender Champ - clean)
+06 FdPrJunir          -> Guitarra (Fender Princeton)
+07 Mar960BV30         -> Guitarra (Marshall 1960B V30)
+08 DizziV30           -> Guitarra (Marshall "Dizzy" V30)
+09 Electrovoice       -> Guitarra (falante EV)
+10 MessDRectV30       -> Guitarra (Mesa Dual Rectifier)
+11 TwinJensenC        -> Guitarra (Fender Twin Jensen)
+12 TvedDlx1x12        -> Guitarra (Tweed Deluxe 1x12)
+13 FendShowman        -> Guitarra (Fender Showman)
+14 J120Roland         -> Guitarra (Roland JC-120)
+15 UK-C30Silvers      -> Guitarra (UK Celestion G12T-75)
+
+16-20 -> CUSTOM (ver acima)
+
+==============================
+DICA RÁPIDA
+==============================
+CAB 5/6/14  = Clean (RHCP, LP versos)
+CAB 7/12    = Crunch (rock clássico)
+CAB 3/4/10  = High Gain (metal)
+CAB 16      = Orange JR (pesado moderno)

@@ -1,0 +1,37 @@
+{
+  "expected_sha256": "2217d15676bfb48ee94474d19651584b643bc17e7827152d91dc6a1111e2d200",
+  "edits": {
+    "7B": {
+      "preset_volume_raw": 78,
+      "fx.enabled": 1,
+      "fx.type": "Boost",
+      "fx.gate": 45,
+      "fx.boost_gain": 16,
+      "amp.enabled": 1,
+      "amp.model_id": 7,
+      "amp.gain": 72,
+      "amp.level": 69,
+      "amp.bass": 46,
+      "amp.mid": 66,
+      "amp.treble": 61,
+      "cab.enabled": 1,
+      "cab.slot": 8,
+      "cab.level": 100,
+      "cab.low_cut_raw": 25,
+      "cab.high_cut_raw": 40,
+      "mod.enabled": 0,
+      "delay.enabled": 1,
+      "delay.type": "Analog",
+      "delay.param1": 45,
+      "delay.param2": 25,
+      "delay.param3": 17,
+      "reverb.enabled": 1,
+      "reverb.type": "Room",
+      "reverb.decay": 25,
+      "reverb.mix": 10,
+      "reverb.high_pass": 40,
+      "reverb.low_pass": 60,
+      "reverb.depth": 12
+    }
+  }
+}

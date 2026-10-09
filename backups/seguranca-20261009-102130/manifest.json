@@ -1,0 +1,131 @@
+{
+  "created": "2026-10-09T10:21:36.111576",
+  "scope": "arquivos locais; nao inclui memoria do pedal",
+  "files": [
+    {
+      "source": "CAB 16-21\\16 - 07_Orange_JR212_center_L19_cab50_e906.wav",
+      "copy": "files\\CAB 16-21\\16 - 07_Orange_JR212_center_L19_cab50_e906.wav",
+      "bytes": 3044,
+      "sha256": "02b8d1ece80c2e3dd078793fabc69a16c2545ad81cbfedae58926b5beee85e6f"
+    },
+    {
+      "source": "CAB 16-21\\17 - Fender Glsy.wav",
+      "copy": "files\\CAB 16-21\\17 - Fender Glsy.wav",
+      "bytes": 67496,
+      "sha256": "d5f5e7a8d152a59db2c432652627e96da0199942720deb3036107bfb8672f1b3"
+    },
+    {
+      "source": "CAB 16-21\\18 - BognerUbercab(4x12)1.wav",
+      "copy": "files\\CAB 16-21\\18 - BognerUbercab(4x12)1.wav",
+      "bytes": 26528,
+      "sha256": "b4d3537b3f2f41c7cabcb077e8d0b1c82d8e0e0c79288e09d3fe160a42cb07f6"
+    },
+    {
+      "source": "CAB 16-21\\19 - DiezelV30(4x12).wav",
+      "copy": "files\\CAB 16-21\\19 - DiezelV30(4x12).wav",
+      "bytes": 31242,
+      "sha256": "eff616270100e502de3e5a2978afb2b6a932a8f0dda76654250ef19911afbdcd"
+    },
+    {
+      "source": "CAB 16-21\\20 - VOX AC30 MIX.wav",
+      "copy": "files\\CAB 16-21\\20 - VOX AC30 MIX.wav",
+      "bytes": 52964,
+      "sha256": "ec5bb31c862545db2833cbdf21d262d1b379fd3d050b7ecdfa392aa1dca6d61f"
+    },
+    {
+      "source": "CAB 16-21\\tank_mini_cabs.txt",
+      "copy": "files\\CAB 16-21\\tank_mini_cabs.txt",
+      "bytes": 1845,
+      "sha256": "b41f755b72596438408ecf87f0e22b6d93c7e58f5345111e7bb8460ac6f4fd4d"
+    },
+    {
+      "source": "M-EFCS\\AppConfig.ini",
+      "copy": "files\\M-EFCS\\AppConfig.ini",
+      "bytes": 194,
+      "sha256": "845825f107b91d31491084cef6fdb990c78824a405dd5da2f87ad067f0e7b10a"
+    },
+    {
+      "source": "M-EFCS\\gitreverse-reverse-engineer\\AppConfig.ini.before",
+      "copy": "files\\M-EFCS\\gitreverse-reverse-engineer\\AppConfig.ini.before",
+      "bytes": 198,
+      "sha256": "914357781089c8bca3f545f03790be332a97e1a7a1daa6f89c68ff4a542f5f65"
+    },
+    {
+      "source": "M-EFCS\\todos os presets\\backup.atkm",
+      "copy": "files\\M-EFCS\\todos os presets\\backup.atkm",
+      "bytes": 1942,
+      "sha256": "c587f3a2328eee5055903034cb70b9511f663dc25086fd7dcff7f78ec8e1620c"
+    },
+    {
+      "source": "Preset modificadov1\\1 preset.atkm",
+      "copy": "files\\Preset modificadov1\\1 preset.atkm",
+      "bytes": 1942,
+      "sha256": "d6cd326dd3510f8401c5cce562df17b41451539b63761ee859d3f35f96c9c496"
+    },
+    {
+      "source": "Preset modificadov1\\presets modificados 1A_4C.atkm",
+      "copy": "files\\Preset modificadov1\\presets modificados 1A_4C.atkm",
+      "bytes": 1942,
+      "sha256": "061a7e67be41203056f96300a4c2fbc301c794f566210fec9f8c5fe150d264bb"
+    },
+    {
+      "source": "preset padrão\\2a.tkm",
+      "copy": "files\\preset padrão\\2a.tkm",
+      "bytes": 92,
+      "sha256": "5d7f4a08b9ad652f6e2a2672332c29e010b65caadbb7cd69205a418e053b3bc3"
+    },
+    {
+      "source": "preset padrão\\3a.tkm",
+      "copy": "files\\preset padrão\\3a.tkm",
+      "bytes": 92,
+      "sha256": "e5cdc5747f650f461cf84eacc0c95c81e58fa7f11d6296d755d7d6fe8a404570"
+    },
+    {
+      "source": "preset padrão\\3b.tkm",
+      "copy": "files\\preset padrão\\3b.tkm",
+      "bytes": 92,
+      "sha256": "9caac015e0803dc33982a070b9e52e955424932cce2486ae3919e0ab72d9d7e0"
+    },
+    {
+      "source": "preset padrão\\3c.tkm",
+      "copy": "files\\preset padrão\\3c.tkm",
+      "bytes": 92,
+      "sha256": "8cd00fe1586c74bfdcd3a38b10d73b552963b687823d5dda50d49f664ded5d4d"
+    },
+    {
+      "source": "preset padrão\\4a.tkm",
+      "copy": "files\\preset padrão\\4a.tkm",
+      "bytes": 92,
+      "sha256": "59d59fe0cf07b87051116d77292b7b395584ad346c6033876cf27bd9f3f994d4"
+    },
+    {
+      "source": "preset padrão\\4b.tkm",
+      "copy": "files\\preset padrão\\4b.tkm",
+      "bytes": 92,
+      "sha256": "a07eb06d585271f3cd851a196002faf8d6def9305cc4a93fa1ee1f740a7fe556"
+    },
+    {
+      "source": "preset padrão\\4c.tkm",
+      "copy": "files\\preset padrão\\4c.tkm",
+      "bytes": 92,
+      "sha256": "e922d93b2310d4f497eba740eb8d73643dd8d7677ebb6046361004cd9a054250"
+    },
+    {
+      "source": "preset padrão\\padrao.atkm",
+      "copy": "files\\preset padrão\\padrao.atkm",
+      "bytes": 1942,
+      "sha256": "9fab22aca5d93eb81d608297555cbde52d4452dce63cd35dbbe993a664879ba3"
+    },
+    {
+      "source": "teste.tkm",
+      "copy": "files\\teste.tkm",
+      "bytes": 92,
+      "sha256": "51a0eedeb80008bd6a5ab4b44f6bfbfdabe680789c65da9aed46f1cc643ae644"
+    }
+  ],
+  "device_export": {
+    "copy": "device\\export-all.atkm",
+    "bytes": 1942,
+    "sha256": "2217d15676bfb48ee94474d19651584b643bc17e7827152d91dc6a1111e2d200"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "expected_sha256": "3c2374d04662274675a02bdec977aa7a08e1a238a50d5f79b7448041cf19549f",
+  "edits": {
+    "3A": {
+      "preset_volume_raw": 85, "fx.enabled": 1, "amp.enabled": 1, "mod.enabled": 0,
+      "delay.enabled": 0, "cab.enabled": 1, "reverb.enabled": 1,
+      "fx.type_id": 1, "amp.model_id": 8, "reverb.type_id": 1, "cab.slot": 9,
+      "amp.gain": 90, "amp.level": 75, "amp.bass": 55, "amp.mid": 45, "amp.treble": 75,
+      "fx.param1": 75, "fx.param2": 70, "reverb.param1": 32, "reverb.param2": 16,
+      "reverb.param3": 20, "reverb.param4": 45, "reverb.param5": 35,
+      "cab.level": 100, "cab.low_cut_raw": 20, "cab.high_cut_raw": 85
+    },
+    "7A": {
+      "preset_volume_raw": 86, "fx.enabled": 1, "amp.enabled": 1, "mod.enabled": 1,
+      "delay.enabled": 1, "cab.enabled": 1, "reverb.enabled": 1,
+      "fx.type_id": 2, "amp.model_id": 6, "mod.type_id": 3, "delay.type_id": 3,
+      "reverb.type_id": 1, "cab.slot": 7,
+      "amp.gain": 88, "amp.level": 72, "amp.bass": 62, "amp.mid": 48, "amp.treble": 78,
+      "fx.param1": 78, "fx.param2": 35, "fx.param3": 62, "fx.param4": 78,
+      "mod.param1": 35, "mod.param2": 20, "mod.param3": 60,
+      "delay.param1": 55, "delay.param2": 30, "delay.param3": 25,
+      "reverb.param1": 28, "reverb.param2": 12, "reverb.param3": 20,
+      "reverb.param4": 40, "reverb.param5": 30,
+      "cab.level": 100, "cab.low_cut_raw": 22, "cab.high_cut_raw": 88
+    },
+    "4B": {
+      "preset_volume_raw": 84, "fx.enabled": 1, "amp.enabled": 1, "mod.enabled": 0,
+      "delay.enabled": 0, "cab.enabled": 1, "reverb.enabled": 1,
+      "fx.type_id": 0, "amp.model_id": 8, "reverb.type_id": 0, "cab.slot": 3,
+      "amp.gain": 82, "amp.level": 76, "amp.bass": 58, "amp.mid": 52, "amp.treble": 70,
+      "fx.param1": 72, "reverb.param1": 35, "reverb.param2": 10,
+      "reverb.param3": 30, "reverb.param4": 25, "reverb.param5": 35,
+      "cab.level": 100, "cab.low_cut_raw": 18, "cab.high_cut_raw": 82
+    },
+    "3C": {
+      "preset_volume_raw": 88, "fx.enabled": 1, "amp.enabled": 1, "mod.enabled": 0,
+      "delay.enabled": 0, "cab.enabled": 1, "reverb.enabled": 1,
+      "fx.type_id": 1, "amp.model_id": 6, "reverb.type_id": 0, "cab.slot": 7,
+      "amp.gain": 84, "amp.level": 78, "amp.bass": 68, "amp.mid": 58, "amp.treble": 65,
+      "fx.param1": 72, "fx.param2": 68, "reverb.param1": 30, "reverb.param2": 10,
+      "reverb.param3": 25, "reverb.param4": 30, "reverb.param5": 30,
+      "cab.level": 100, "cab.low_cut_raw": 25, "cab.high_cut_raw": 80
+    }
+  }
+}

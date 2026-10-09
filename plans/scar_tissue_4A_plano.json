@@ -1,0 +1,37 @@
+{
+  "expected_sha256": "9fab22aca5d93eb81d608297555cbde52d4452dce63cd35dbbe993a664879ba3",
+  "edits": {
+    "4A": {
+      "preset_volume_raw": 82,
+      "fx.enabled": 0,
+      "amp.enabled": 1,
+      "mod.enabled": 1,
+      "delay.enabled": 0,
+      "cab.enabled": 1,
+      "reverb.enabled": 1,
+      "fx.type_id": 0,
+      "amp.model_id": 0,
+      "mod.type_id": 0,
+      "delay.type_id": 0,
+      "reverb.type_id": 3,
+      "cab.slot": 5,
+      "amp.gain": 30,
+      "amp.level": 78,
+      "amp.bass": 48,
+      "amp.mid": 55,
+      "amp.treble": 68,
+      "mod.param1": 24,
+      "mod.param2": 32,
+      "mod.param3": 28,
+      "reverb.param1": 28,
+      "reverb.param2": 18,
+      "reverb.param3": 30,
+      "reverb.param4": 45,
+      "reverb.param5": 20,
+      "reverb.param6": 0,
+      "cab.level": 100,
+      "cab.low_cut_raw": 20,
+      "cab.high_cut_raw": 55
+    }
+  }
+}

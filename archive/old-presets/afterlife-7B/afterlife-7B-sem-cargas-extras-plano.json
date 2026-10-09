@@ -1,0 +1,9 @@
+{
+  "expected_sha256": "82229c7fdfcd515909eb4c79d28e0e299420a2b075162c3e35f5410b3e4da189",
+  "edits": {
+    "7B": {
+      "amp.model_id": 8,
+      "cab.slot": 10
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "expected_sha256": "c587f3a2328eee5055903034cb70b9511f663dc25086fd7dcff7f78ec8e1620c",
+  "edits": {
+    "1A": {
+      "amp.gain": 41
+    },
+    "1B": {
+      "reverb.mix": 15
+    },
+    "2B": {
+      "cab.slot": 8
+    }
+  }
+}

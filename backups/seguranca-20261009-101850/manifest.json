@@ -1,0 +1,90 @@
+{
+  "created": "2026-10-09T10:18:51.529886",
+  "scope": "arquivos locais; nao inclui memoria do pedal",
+  "files": [
+    {
+      "source": "M-EFCS\\AppConfig.ini",
+      "copy": "files\\M-EFCS\\AppConfig.ini",
+      "bytes": 194,
+      "sha256": "845825f107b91d31491084cef6fdb990c78824a405dd5da2f87ad067f0e7b10a"
+    },
+    {
+      "source": "M-EFCS\\gitreverse-reverse-engineer\\AppConfig.ini.before",
+      "copy": "files\\M-EFCS\\gitreverse-reverse-engineer\\AppConfig.ini.before",
+      "bytes": 198,
+      "sha256": "914357781089c8bca3f545f03790be332a97e1a7a1daa6f89c68ff4a542f5f65"
+    },
+    {
+      "source": "M-EFCS\\todos os presets\\backup.atkm",
+      "copy": "files\\M-EFCS\\todos os presets\\backup.atkm",
+      "bytes": 1942,
+      "sha256": "c587f3a2328eee5055903034cb70b9511f663dc25086fd7dcff7f78ec8e1620c"
+    },
+    {
+      "source": "Preset modificadov1\\1 preset.atkm",
+      "copy": "files\\Preset modificadov1\\1 preset.atkm",
+      "bytes": 1942,
+      "sha256": "d6cd326dd3510f8401c5cce562df17b41451539b63761ee859d3f35f96c9c496"
+    },
+    {
+      "source": "Preset modificadov1\\presets modificados 1A_4C.atkm",
+      "copy": "files\\Preset modificadov1\\presets modificados 1A_4C.atkm",
+      "bytes": 1942,
+      "sha256": "061a7e67be41203056f96300a4c2fbc301c794f566210fec9f8c5fe150d264bb"
+    },
+    {
+      "source": "preset padrão\\2a.tkm",
+      "copy": "files\\preset padrão\\2a.tkm",
+      "bytes": 92,
+      "sha256": "5d7f4a08b9ad652f6e2a2672332c29e010b65caadbb7cd69205a418e053b3bc3"
+    },
+    {
+      "source": "preset padrão\\3a.tkm",
+      "copy": "files\\preset padrão\\3a.tkm",
+      "bytes": 92,
+      "sha256": "e5cdc5747f650f461cf84eacc0c95c81e58fa7f11d6296d755d7d6fe8a404570"
+    },
+    {
+      "source": "preset padrão\\3b.tkm",
+      "copy": "files\\preset padrão\\3b.tkm",
+      "bytes": 92,
+      "sha256": "9caac015e0803dc33982a070b9e52e955424932cce2486ae3919e0ab72d9d7e0"
+    },
+    {
+      "source": "preset padrão\\3c.tkm",
+      "copy": "files\\preset padrão\\3c.tkm",
+      "bytes": 92,
+      "sha256": "8cd00fe1586c74bfdcd3a38b10d73b552963b687823d5dda50d49f664ded5d4d"
+    },
+    {
+      "source": "preset padrão\\4a.tkm",
+      "copy": "files\\preset padrão\\4a.tkm",
+      "bytes": 92,
+      "sha256": "59d59fe0cf07b87051116d77292b7b395584ad346c6033876cf27bd9f3f994d4"
+    },
+    {
+      "source": "preset padrão\\4b.tkm",
+      "copy": "files\\preset padrão\\4b.tkm",
+      "bytes": 92,
+      "sha256": "a07eb06d585271f3cd851a196002faf8d6def9305cc4a93fa1ee1f740a7fe556"
+    },
+    {
+      "source": "preset padrão\\4c.tkm",
+      "copy": "files\\preset padrão\\4c.tkm",
+      "bytes": 92,
+      "sha256": "e922d93b2310d4f497eba740eb8d73643dd8d7677ebb6046361004cd9a054250"
+    },
+    {
+      "source": "preset padrão\\padrao.atkm",
+      "copy": "files\\preset padrão\\padrao.atkm",
+      "bytes": 1942,
+      "sha256": "9fab22aca5d93eb81d608297555cbde52d4452dce63cd35dbbe993a664879ba3"
+    },
+    {
+      "source": "teste.tkm",
+      "copy": "files\\teste.tkm",
+      "bytes": 92,
+      "sha256": "51a0eedeb80008bd6a5ab4b44f6bfbfdabe680789c65da9aed46f1cc643ae644"
+    }
+  ]
+}

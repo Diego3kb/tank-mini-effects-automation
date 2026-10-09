@@ -1,0 +1,8 @@
+{
+  "expected_sha256": "786edcf6e420d7f3b75d6be5ea024875e571320d26a5b212d973d5958b20ec0a",
+  "edits": {
+    "7C": {
+      "amp.model_id": 9
+    }
+  }
+}
