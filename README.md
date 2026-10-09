@@ -10,6 +10,7 @@ Leia primeiro:
 - [docs/REGRAS.md](docs/REGRAS.md): regras de segurança.
 - [docs/ESTADO-DE-FABRICA.md](docs/ESTADO-DE-FABRICA.md): exportação-base após o reset.
 - [EFEITOS-ATIVOS.md](EFEITOS-ATIVOS.md): estado atual dos presets.
+- [docs/FONTES-CABS-AMPS.md](docs/FONTES-CABS-AMPS.md): sites e origens dos CABs e AMPs.
 
 ## O que este projeto faz
 
