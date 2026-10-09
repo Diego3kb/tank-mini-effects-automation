@@ -12,6 +12,20 @@ export presets, CABs and AMP captures.
 - [docs/FONTES-CABS-AMPS.md](docs/FONTES-CABS-AMPS.md): CAB and AMP sources.
 - [EFEITOS-ATIVOS.md](EFEITOS-ATIVOS.md): current pedal state.
 
+## Requirements
+
+- Windows, because M-EFCS is a Windows application.
+- Python 3.10 or newer. The automation was tested with Python 3.14.6.
+- `pywinauto` for controlling the M-EFCS interface. Install it with:
+
+```powershell
+py -m pip install -r requirements.txt
+```
+
+- The original `M-EFCS.exe` in the project workspace.
+- A Tank Mini connected through USB when importing, exporting or saving to the
+  pedal.
+
 ## What this project does
 
 This project automates backups, validation, editing, importing and exporting
