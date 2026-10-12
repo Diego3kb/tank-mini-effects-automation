@@ -113,3 +113,49 @@ def api_device():
     if result.returncode != 0:
         return jsonify(ok=False, error=(result.stdout + result.stderr).strip()), 400
     return jsonify(ok=True, log=result.stdout.strip())
+
+
+LIBRARY_COMMANDS = {"cab": "open-cab", "amp": "open-amp"}
+SAVE_COMMANDS = {"cab": "save-cab", "amp": "save-amp"}
+
+
+@app.get("/api/library")
+def api_library():
+    cabs, amps = [], []
+    for path in (PROJECT / "assets").rglob("*"):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(PROJECT).as_posix()
+        suffix = path.suffix.lower()
+        if suffix == ".wav":
+            cabs.append(relative)
+        elif suffix == ".am2data":
+            amps.append(relative)
+    return jsonify(cabs=sorted(cabs), amps=sorted(amps))
+
+
+def run_library(argv: list[str]):
+    result = run_tool(argv)
+    if result.returncode != 0:
+        return jsonify(ok=False, error=(result.stdout + result.stderr).strip()), 400
+    return jsonify(ok=True, log=result.stdout.strip())
+
+
+@app.post("/api/library/open")
+def api_library_open():
+    body = request.get_json(silent=True) or {}
+    kind, path = body.get("kind"), body.get("path")
+    if kind not in LIBRARY_COMMANDS or not path:
+        return jsonify(error="informe kind (cab|amp) e path"), 400
+    return run_library(["tools/m_efcs_automation.py", LIBRARY_COMMANDS[kind], str(path)])
+
+
+@app.post("/api/library/save")
+def api_library_save():
+    body = request.get_json(silent=True) or {}
+    kind, item = body.get("kind"), body.get("item")
+    if kind not in SAVE_COMMANDS or not isinstance(item, int):
+        return jsonify(error="informe kind (cab|amp) e item (numero)"), 400
+    if body.get("confirm") is not True:
+        return jsonify(error="confirmacao obrigatoria: envie confirm: true"), 400
+    return run_library(["tools/m_efcs_automation.py", SAVE_COMMANDS[kind], str(item)])
