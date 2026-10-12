@@ -9,6 +9,10 @@ importação e exportação de presets, CABs e AMPs.
 |---|---|
 | `docs/` | Guias, regras e mapas |
 | `tools/` | Ferramentas Python (UI web: `py tools/ui.py`) |
+| `plans/` | Planos JSON gerados pela UI ao salvar edições |
+| `presets/` | Bancos e presets de trabalho |
+| `backups/` | Cópias e exportações verificadas |
+| `archive/` | Histórico e arquivos antigos |
 | `assets/cabs/` | IRs/CABs WAV |
 | `assets/amps/` | Capturas AMP AM2/AMX |
 

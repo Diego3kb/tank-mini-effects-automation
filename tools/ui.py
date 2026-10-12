@@ -32,10 +32,13 @@ def index():
 
 def run_tool(args: list[str]) -> subprocess.CompletedProcess:
     """Roda um script de tools/ em subprocess com a CLI testada."""
-    return subprocess.run(
-        [sys.executable, *args],
-        cwd=PROJECT, capture_output=True, text=True, timeout=120,
-    )
+    try:
+        return subprocess.run(
+            [sys.executable, *args],
+            cwd=PROJECT, capture_output=True, text=True, timeout=120,
+        )
+    except subprocess.TimeoutExpired:
+        return subprocess.CompletedProcess(args, 1, stdout="", stderr=f"tempo limite de 120s esgotado em {args[0]}; a janela do M-EFCS pode estar travada")
 
 
 def resolve_path(raw: str) -> Path:
@@ -51,7 +54,7 @@ def api_bundle():
     path = resolve_path(raw)
     try:
         data, _, _ = load(path)
-    except (FileNotFoundError, ValueError) as exc:
+    except (FileNotFoundError, ValueError, PermissionError, IsADirectoryError) as exc:
         return jsonify(error=str(exc)), 400
     return jsonify(
         path=str(path),
@@ -69,7 +72,7 @@ def api_edit():
     path = resolve_path(raw)
     try:
         data = path.read_bytes()
-    except FileNotFoundError as exc:
+    except (FileNotFoundError, PermissionError, IsADirectoryError) as exc:
         return jsonify(error=str(exc)), 400
     plans_dir = Path(app.config.setdefault("PLANS_DIR", PROJECT / "plans"))
     plans_dir.mkdir(parents=True, exist_ok=True)

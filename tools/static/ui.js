@@ -91,11 +91,11 @@ function renderEditor() {
   $("#editor").classList.remove("hidden");
   for (const m of ["fx", "amp", "mod", "delay", "cab", "reverb"])
     $(`[data-f="${m}.enabled"]`).checked = !!d[`${m}.enabled`];
-  fillSelect($('[data-f="fx.type"]'), "fx", d.fx.type_id);
-  fillSelect($('[data-f="mod.type"]'), "mod", d.mod.type_id);
-  fillSelect($('[data-f="delay.type"]'), "delay", d.delay.type_id);
-  fillSelect($('[data-f="reverb.type"]'), "reverb", d.reverb.type_id);
-  fillSelect($('[data-f="amp.model"]'), "amp", d.amp.model_id);
+  fillSelect($('[data-f="fx.type_id"]'), "fx", d.fx.type_id);
+  fillSelect($('[data-f="mod.type_id"]'), "mod", d.mod.type_id);
+  fillSelect($('[data-f="delay.type_id"]'), "delay", d.delay.type_id);
+  fillSelect($('[data-f="reverb.type_id"]'), "reverb", d.reverb.type_id);
+  fillSelect($('[data-f="amp.model_id"]'), "amp", d.amp.model_id);
   fillSelect($('[data-f="cab.slot"]'), "cab", d.cab.slot);
   for (const f of ["preset_volume_raw", "amp.gain", "amp.level", "amp.bass", "amp.mid", "amp.treble", "cab.level", "cab.low_cut_raw", "cab.high_cut_raw"])
     sliderRow(f, d[f]);
@@ -124,6 +124,7 @@ $("#btn-save").addEventListener("click", async () => {
   const changes = {};
   $$("[data-f]").forEach((input) => {
     const field = input.dataset.f;
+    if (!(field in state.original[slot])) return; // campo sem valor carregado: nunca enviar
     let value;
     if (input.type === "checkbox") value = input.checked ? 1 : 0;
     else value = Number(input.value);
@@ -159,7 +160,11 @@ async function device(command, extra = {}) {
 
 $("#dev-backup").addEventListener("click", () => device("backup"));
 $("#dev-export-all").addEventListener("click", () => device("export-all"));
-$("#dev-export-preset").addEventListener("click", () => device("export-preset", { slot: $("#dev-slot").value }));
+$("#dev-export-preset").addEventListener("click", () => {
+  const path = prompt("Caminho do arquivo de destino do .tkm:", `export-${$("#dev-slot").value}.tkm`);
+  if (!path) return;
+  device("export-preset", { slot: $("#dev-slot").value, path });
+});
 $("#dev-import-preset").addEventListener("click", () => device("import-preset", { slot: $("#dev-slot").value, path: $("#dev-import-file").value.trim() }));
 $("#dev-import-all").addEventListener("click", () => device("import-all", { path: $("#dev-import-file").value.trim() }));
 

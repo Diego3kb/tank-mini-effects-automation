@@ -39,3 +39,13 @@ def test_edit_apply_falha(tmp_path, monkeypatch):
     monkeypatch.setattr(ui, "run_tool", lambda args: __import__("subprocess").CompletedProcess(args, 1, stdout="", stderr="hash original diferente ou ausente"))
     r = client().post("/api/edit", json={"path": str(bundle), "edits": {"1A": {"amp.gain": 10}}})
     assert r.status_code == 400 and "hash original diferente" in r.get_json()["error"]
+
+def test_selects_usam_chaves_reais_do_estado():
+    # F1: selects do HTML devem usar as mesmas chaves que /api/bundle devolve,
+    # senao o diff envia edits fantasmas e sobrescreve valores desconhecidos por 0.
+    from pathlib import Path
+    html = (Path(__file__).resolve().parents[1] / "tools/templates/index.html").read_text(encoding="utf-8")
+    for key in ["fx.type_id", "amp.model_id", "mod.type_id", "delay.type_id", "reverb.type_id"]:
+        assert f'data-f="{key}"' in html, f"faltando data-f={key}"
+    for bad in ['data-f="fx.type"', 'data-f="amp.model"', 'data-f="mod.type"', 'data-f="delay.type"', 'data-f="reverb.type"']:
+        assert bad not in html, f"data-f inválido presente: {bad}"

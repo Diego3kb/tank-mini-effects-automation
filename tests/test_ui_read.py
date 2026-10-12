@@ -26,3 +26,8 @@ def test_bundle_arquivo_invalido(tmp_path):
 def test_bundle_ausente(tmp_path):
     r = client().get(f"/api/bundle?path={tmp_path/'naoexiste.atkm'}")
     assert r.status_code == 400
+
+def test_bundle_diretorio_nao_500(tmp_path):
+    pasta = tmp_path / "uma-pasta"; pasta.mkdir()
+    r = client().get(f"/api/bundle?path={pasta}")
+    assert r.status_code == 400 and "error" in r.get_json()
