@@ -13,7 +13,7 @@ import sys
 import time
 from pathlib import Path
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, render_template, request
 
 TOOLS = Path(__file__).resolve().parent
 PROJECT = TOOLS.parent
@@ -23,6 +23,11 @@ from atkm import SLOTS, load  # noqa: E402
 from preset_config import show  # noqa: E402
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
+
+
+@app.get("/")
+def index():
+    return render_template("index.html")
 
 
 def run_tool(args: list[str]) -> subprocess.CompletedProcess:

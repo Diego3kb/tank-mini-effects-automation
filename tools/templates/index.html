@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tank Mini — UI</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='ui.css') }}">
+</head>
+<body>
+<header>
+  <h1>Tank Mini</h1>
+  <nav>
+    <button data-tab="banco" class="tab-btn active">Banco</button>
+    <button data-tab="dispositivo" class="tab-btn">Dispositivo</button>
+    <button data-tab="biblioteca" class="tab-btn">Biblioteca</button>
+  </nav>
+</header>
+
+<main>
+<!-- ============ ABA BANCO ============ -->
+<section id="tab-banco" class="tab active">
+  <div class="row">
+    <input id="bundle-path" type="text" placeholder="caminho do .atkm (ex: backups/export.atkm)">
+    <button id="btn-open">Abrir banco</button>
+  </div>
+  <p id="bundle-info" class="muted"></p>
+  <div id="slot-grid" class="slot-grid"></div>
+
+  <div id="editor" class="hidden">
+    <h2>Slot <span id="ed-slot"></span></h2>
+    <div class="panel">
+      <label><input type="checkbox" data-f="fx.enabled"> FX</label>
+      <select data-f="fx.type" data-enum="fx"></select>
+      <span id="fx-params" class="params"></span>
+    </div>
+    <div class="panel">
+      <label><input type="checkbox" data-f="amp.enabled"> AMP</label>
+      <select data-f="amp.model" data-enum="amp"></select>
+      <span id="amp-params" class="params"></span>
+    </div>
+    <div class="panel">
+      <label><input type="checkbox" data-f="mod.enabled"> MOD</label>
+      <select data-f="mod.type" data-enum="mod"></select>
+      <span id="mod-params" class="params"></span>
+    </div>
+    <div class="panel">
+      <label><input type="checkbox" data-f="delay.enabled"> Delay</label>
+      <select data-f="delay.type" data-enum="delay"></select>
+      <span id="delay-params" class="params"></span>
+    </div>
+    <div class="panel">
+      <label><input type="checkbox" data-f="cab.enabled"> CAB</label>
+      <select data-f="cab.slot" data-enum="cab"></select>
+    </div>
+    <div class="panel">
+      <label><input type="checkbox" data-f="reverb.enabled"> Reverb</label>
+      <select data-f="reverb.type" data-enum="reverb"></select>
+      <span id="reverb-params" class="params"></span>
+    </div>
+    <div class="panel sliders">
+      <label>Volume <input type="range" min="0" max="100" data-f="preset_volume_raw"><span data-v="preset_volume_raw"></span></label>
+      <label>Gain <input type="range" min="0" max="100" data-f="amp.gain"><span data-v="amp.gain"></span></label>
+      <label>Level <input type="range" min="0" max="100" data-f="amp.level"><span data-v="amp.level"></span></label>
+      <label>Bass <input type="range" min="0" max="100" data-f="amp.bass"><span data-v="amp.bass"></span></label>
+      <label>Mid <input type="range" min="0" max="100" data-f="amp.mid"><span data-v="amp.mid"></span></label>
+      <label>Treble <input type="range" min="0" max="100" data-f="amp.treble"><span data-v="amp.treble"></span></label>
+      <label>CAB Level <input type="range" min="0" max="100" data-f="cab.level"><span data-v="cab.level"></span></label>
+      <label>CAB Low Cut <input type="range" min="0" max="100" data-f="cab.low_cut_raw"><span data-v="cab.low_cut_raw"></span></label>
+      <label>CAB High Cut <input type="range" min="0" max="100" data-f="cab.high_cut_raw"><span data-v="cab.high_cut_raw"></span></label>
+    </div>
+    <button id="btn-save" class="primary">Salvar como novo banco</button>
+  </div>
+  <pre id="edit-log" class="log"></pre>
+</section>
+
+<!-- ============ ABA DISPOSITIVO ============ -->
+<section id="tab-dispositivo" class="tab">
+  <p class="muted">Exige M-EFCS e Tank Mini conectados. Toda importação gera backup automático.</p>
+  <div class="row">
+    <button id="dev-backup">Backup (export-all)</button>
+    <button id="dev-export-all">Export-all</button>
+  </div>
+  <div class="row">
+    <select id="dev-slot"></select>
+    <button id="dev-export-preset">Export-preset</button>
+    <input id="dev-import-file" type="text" placeholder="caminho do .tkm/.atkm">
+    <button id="dev-import-preset">Import-preset</button>
+    <button id="dev-import-all">Import-all</button>
+  </div>
+  <pre id="device-log" class="log"></pre>
+</section>
+
+<!-- ============ ABA BIBLIOTECA ============ -->
+<section id="tab-biblioteca" class="tab">
+  <p class="muted">Carrega CAB (.wav) ou AMP (.am2Data) na biblioteca do M-EFCS. O envio ao pedal (save) exige dupla confirmação.</p>
+  <div class="row">
+    <button id="lib-refresh">Atualizar listas</button>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>CAB / IR</h3>
+      <ul id="lib-cabs"></ul>
+    </div>
+    <div>
+      <h3>AMP</h3>
+      <ul id="lib-amps"></ul>
+    </div>
+  </div>
+  <pre id="library-log" class="log"></pre>
+</section>
+</main>
+
+<script src="{{ url_for('static', filename='ui.js') }}"></script>
+</body>
+</html>
