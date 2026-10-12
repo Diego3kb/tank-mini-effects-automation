@@ -7,8 +7,10 @@ dispositivo vao por subprocess da CLI testada em tools/.
 from __future__ import annotations
 
 import hashlib
+import json
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 from flask import Flask, jsonify, request
@@ -50,4 +52,36 @@ def api_bundle():
         path=str(path),
         sha256=hashlib.sha256(data).hexdigest(),
         slots={slot: show(data, slot) for slot in SLOTS},
+    )
+
+
+@app.post("/api/edit")
+def api_edit():
+    body = request.get_json(silent=True) or {}
+    raw, edits = body.get("path"), body.get("edits")
+    if not raw or not isinstance(edits, dict) or not edits:
+        return jsonify(error="informe path e edits"), 400
+    path = resolve_path(raw)
+    try:
+        data = path.read_bytes()
+    except FileNotFoundError as exc:
+        return jsonify(error=str(exc)), 400
+    plans_dir = Path(app.config.setdefault("PLANS_DIR", PROJECT / "plans"))
+    plans_dir.mkdir(parents=True, exist_ok=True)
+    stamp = time.strftime("%Y%m%d-%H%M%S")
+    plan_path = plans_dir / f"plano-{stamp}.json"
+    plan_path.write_text(
+        json.dumps({"expected_sha256": hashlib.sha256(data).hexdigest(), "edits": edits},
+                   ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    output = path.with_name(f"{path.stem}-edit-{stamp}.atkm")
+    result = run_tool(["tools/preset_config.py", "apply", str(path), str(plan_path), str(output)])
+    if result.returncode != 0:
+        return jsonify(error=(result.stdout + result.stderr).strip()), 400
+    return jsonify(
+        output=str(output),
+        sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
+        plan=str(plan_path),
+        log=result.stdout.strip(),
     )
