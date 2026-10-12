@@ -53,6 +53,25 @@ testing.
 6. Update `EFEITOS-ATIVOS.md` and confirm that no auxiliary dialog remains
    open.
 
+## Web UI
+
+```powershell
+py tools\ui.py
+```
+
+Opens `http://127.0.0.1:8517` automatically. Three tabs:
+
+- **Banco**: open a `.atkm`, view/edit all 21 slots (module toggles, effect
+  types, AMP model, CAB slot, gain/EQ sliders) and save as a NEW bank file.
+  Every save generates a JSON plan in `plans/` with the source SHA-256 and
+  runs `preset_config.py apply`.
+- **Dispositivo**: backup, export/import preset and bank through M-EFCS.
+  Requires the M-EFCS window and the pedal; imports always create an
+  automatic safety backup first.
+- **Biblioteca**: load CAB (.wav) / AMP (.am2Data) files into the M-EFCS
+  library and send them to the pedal (`save-cab`/`save-amp`) after a double
+  confirmation, because the target slot must be checked on the M-EFCS screen.
+
 ## Tools
 
 - `tools/m_efcs_automation.py`: backup, import, export and library actions.

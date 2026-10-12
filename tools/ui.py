@@ -164,3 +164,11 @@ def api_library_save():
     if body.get("confirm") is not True:
         return jsonify(error="confirmacao obrigatoria: envie confirm: true"), 400
     return run_library(["tools/m_efcs_automation.py", SAVE_COMMANDS[kind], str(item)])
+
+
+if __name__ == "__main__":
+    import threading
+    import webbrowser
+
+    threading.Timer(1.0, lambda: webbrowser.open("http://127.0.0.1:8517")).start()
+    app.run(host="127.0.0.1", port=8517, debug=False)

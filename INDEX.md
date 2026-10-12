@@ -8,14 +8,9 @@ importação e exportação de presets, CABs e AMPs.
 | Pasta | Conteúdo |
 |---|---|
 | `docs/` | Guias, regras e mapas |
-| `tools/` | Ferramentas Python |
-| `plans/` | Planos JSON de presets |
-| `presets/active/` | Presets atuais |
-| `presets/tests/` | Testes |
+| `tools/` | Ferramentas Python (UI web: `py tools/ui.py`) |
 | `assets/cabs/` | IRs/CABs WAV |
 | `assets/amps/` | Capturas AMP AM2/AMX |
-| `backups/` | Cópias e exportações verificadas |
-| `archive/` | Histórico e arquivos antigos |
 
 Comece por [docs/GUIA-COMPLETO.md](docs/GUIA-COMPLETO.md). O estado zerado de
 referência está em [docs/ESTADO-DE-FABRICA.md](docs/ESTADO-DE-FABRICA.md).
