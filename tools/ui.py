@@ -85,3 +85,31 @@ def api_edit():
         plan=str(plan_path),
         log=result.stdout.strip(),
     )
+
+
+DEVICE_COMMANDS = {
+    "backup": [],
+    "export-all": [],
+    "export-preset": ["slot", "path"],
+    "import-preset": ["slot", "path"],
+    "import-all": ["path"],
+}
+
+
+@app.post("/api/device")
+def api_device():
+    body = request.get_json(silent=True) or {}
+    command = body.get("command")
+    if command not in DEVICE_COMMANDS:
+        return jsonify(error=f"comando desconhecido: {command}"), 400
+    required = DEVICE_COMMANDS[command]
+    missing = [field for field in required if not body.get(field)]
+    if missing:
+        return jsonify(error=f"campos obrigatorios ausentes: {missing}"), 400
+    argv = ["tools/m_efcs_automation.py", command]
+    for field in required:
+        argv.append(str(body[field]))
+    result = run_tool(argv)
+    if result.returncode != 0:
+        return jsonify(ok=False, error=(result.stdout + result.stderr).strip()), 400
+    return jsonify(ok=True, log=result.stdout.strip())
